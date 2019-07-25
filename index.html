@@ -13,8 +13,88 @@
 <!DOCTYPE html>
 <html>
   <head>
+        <!-- link to the SqPaymentForm library -->
+    <script type="text/javascript" src="https://js.squareup.com/v2/paymentform">
+    </script>
+
+    <!-- link to the local SqPaymentForm initialization -->
+    <script type="text/javascript" src="mysqpaymentform.js">
+    </script>
+
+    <!-- link to the local custom styles for SqPaymentForm -->
+    <link rel="stylesheet" type="text/css" href="mysqpaymentform.css">
   </head>
   <body>
     Get ready for your first payment with Square!
+    <div id="form-container">
+        <div id="sq-ccbox">
+          <form id="nonce-form" novalidate action="process-payment" method="post">
+            <fieldset>
+            <field>
+              <div class="form-group">
+                <label for="input-text" class="control-label">First Name</label>
+                <input type="text" class="sq-input" name="first-name" placeholder="" />
+              </div>
+              <div class="form-group">
+                <label for="input-text" class="control-label">Last Name</label>
+                <input type="text" class="sq-input" name="last-name" placeholder="" />
+              </div>
+              <div class="form-group">
+                <label for="input-text" class="control-label">Student Number</label>
+                <input type="number" class="sq-input" name="student-num" placeholder="" />
+              </div>
+              <div class="form-group">
+                <label for="input-text" class="control-label">Email (do not use your uottawa email)</label>
+                <input type="email" class="sq-input" name="email" placeholder="" />
+              </div>
+              <div class="form-group">
+                <label for="input-date" class=dcontrol-label">If you have any diatery restrictions (allergies, vegetarianism, lactose intolerance, etc.), please list them here:</label>
+                <textarea name="diet" class="text_area " rows="4" cols="50"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="input-money" class="control-label">Do you have physical disabilities?</label>
+                <select name="yes-no" id="physical">
+                  <option value="yes">Yes</option>
+                  <option value="no">No</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="input-date" class=dcontrol-label">If you are currently taking any prescriptions or medications please list them here:</label>
+                <textarea name="diet" class="sq-input" rows="4" cols="50"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="address" class="control-label">Health card Number</label>
+                <input type="number" class="sq-input" id="health-num" placeholder="">
+              </div>
+              <div class="form-group">
+                <label for="input-text" class="control-label">Emergency Contact Name</label>
+                <input type="text" class="sq-input" id="em-name" placeholder="" />
+              </div>
+              <div class="form-group">
+                <label for="input-text" class="control-label">Emergency Contact Phone Number</label>
+                <input type="text" class="sq-input" id="em-num" placeholder="" />
+              </div>
+            </field>
+            </fieldset>
+            <fieldset>
+              <div id="sq-card-number"></div>
+              <div class="third">
+                <div id="sq-expiration-date"></div>
+              </div>
+              <div class="third">
+                <div id="sq-cvv"></div>
+              </div>
+              <div class="third">
+                <div id="sq-postal-code"></div>
+              </div>
+            </fieldset>
+            <button id="sq-creditcard" class="button-credit-card" onclick="onGetCardNonce(event)">Pay $100.00</button>
+            <!--
+              After a nonce is generated it will be assigned to this hidden input field.
+            -->
+            <input type="hidden" id="card-nonce" name="nonce">
+          </form>
+        </div> <!-- end #sq-ccbox -->
+       </div> <!-- end #form-container -->
   </body>
 </html>

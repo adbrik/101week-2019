@@ -18,8 +18,8 @@ const app = express();
 const port = 3000;
 
 // Set the Access Token and Location Id
-const accessToken = 'REPLACE_WITH_ACCESS_TOKEN';
-const locationId = 'REPLACE_WITH_LOCATION_ID';
+const accessToken = 'EAAAELN0UeusapsdHbnvVZVJIPBYsMRtAGDBPs8yIOqVSSIetj64lJy85gJTM3Bh';
+const locationId = 'CBASEPNEBK-0gC0Ixav9nABuYQ4gAQ';
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -42,13 +42,14 @@ app.post('/process-payment', function(req, res){
   const requestBody = {
     card_nonce: requestParams.nonce,
     amount_money: {
-      amount: 100, // $1.00 charge
-      currency: 'USD'
+      amount: 10000, // $1.00 charge
+      currency: 'CAD'
     },
     idempotency_key: idempotencyKey
   };
   transactionsApi.charge(locationId, requestBody).then(function(data) {
     const json= JSON.stringify(data);
+    console.log(json);
     res.status(200).json({
       'title': 'Payment Successful',
       'result': json
