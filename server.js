@@ -18,7 +18,8 @@ const app = express();
 const port = 3000;
 
 // Set the Access Token and Location Id
-
+const accessToken = 'EAAAELN0UeusapsdHbnvVZVJIPBYsMRtAGDBPs8yIOqVSSIetj64lJy85gJTM3Bh';
+const locationId = 'CBASEPNEBK-0gC0Ixav9nABuYQ4gAQ';
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
