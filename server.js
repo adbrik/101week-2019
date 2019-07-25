@@ -63,6 +63,6 @@ app.post('/process-payment', function(req, res){
 });
 
 app.listen(
-  port,
-  () => console.log(`listening on - http://localhost:${port}`)
+  process.env.PORT || 8080,
+  () => console.log(`listening on - http://localhost:${process.env.PORT}`)
 );
