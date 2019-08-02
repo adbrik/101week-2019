@@ -90,62 +90,132 @@
       </nav>
 
       <section id="schedule" class="features">
-          <div class="container">
-              <div class="row">
-                  <div class="col-md-8 col-md-offset-2">
-                      <div class="section-heading">
-                          <h2 data-en>Register for 101 Week</h2><br>
-                          <h2 data-fr>L'horaire</h2><br>
-                            <div class="form-group">
-                        <label for="input-text" class="control-label">First Name</label>
-                        <input type="text" class="form-control" name="first-name" placeholder="" />
-                      </div>
-                      <div class="form-group">
-                        <label for="input-text" class="control-label">Last Name</label>
-                        <input type="text" class="form-control" name="last-name" placeholder="" />
-                      </div>
-                      <div class="form-group">
-                        <label for="input-text" class="control-label">Student Number</label>
-                        <input type="number" class="form-control" name="student-num" placeholder="" />
-                      </div>
-                      <div class="form-group">
-                        <label for="input-text" class="control-label">Email (do not use your uottawa email)</label>
-                        <input type="email" class="form-control" name="email" placeholder="" />
-                      </div>
-                      <div class="form-group">
-                        <label for="input-date" class=dcontrol-label">If you have any diatery restrictions (allergies, vegetarianism, lactose intolerance, etc.), please list them here:</label>
-                        <textarea name="diet" class="text_area " rows="4" cols="50"></textarea>
-                      </div>
-                      <div class="form-group">
-                        <label for="input-money" class="control-label">Do you have physical disabilities?</label>
-                        <select name="yes-no" id="physical">
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
-                  </select>
-                      </div>
-                      <div class="form-group">
-                        <label for="input-date" class=dcontrol-label">If you are currently taking any prescriptions or medications please list them here:</label>
-                        <textarea name="diet" class="text_area " rows="4" cols="50"></textarea>
-                      </div>
-                      <div class="form-group">
-                        <label for="address" class="control-label">Health card Number</label>
-                        <input type="number" class="form-control" id="health-num" placeholder="">
-                      </div>
-                      <div class="form-group">
-                        <label for="input-text" class="control-label">Emergency Contact Name</label>
-                        <input type="text" class="form-control" id="em-name" placeholder="" />
-                      </div>
-                      <div class="form-group">
-                        <label for="input-text" class="control-label">Emergency Contact Phone Number</label>
-                        <input type="text" class="form-control" id="em-num" placeholder="" />
-                      </div>
-                      <center><button type="submit" class="btn">Proceed to payment</button></center>	          			</form>
+		<div class="container">
+			<div class="row mt-5 mb-3">
+				<div class="col-xl-8 mx-auto text-center">
+					<h2 data-en>Register for 101 Week</h2><br>
+					<h2 data-fr>L'horaire</h2><br>
+				</div>
+			</div>
+			<div class="row">
+				<h3 style="color:#5AB1BB">Student Information</h3>
+				<div class="col-md-8 col-md-offset-2">
+					<div class="section-heading">
+					<form>
+						<div class="form-row">
+							<div class="form-group col-lg-4">
+								<label for="first-name" class="control-label">First Name <span style="color:red;">*</span></label>
+								<input type="text" class="form-control" id="first-name" name="first-name" placeholder="" />
+							</div>
+							<div class="form-group col-lg-4">
+								<label for="last-name" class="control-label">Last Name <span style="color:red;">*</span></label>
+								<input type="text" class="form-control" id="last-name" name="last-name" placeholder="" />
+							</div>
+							<div class="form-group col-lg-4">
+								<label for="student-num" class="control-label">Student Number <span style="color:red;">*</span></label>
+								<input type="number" class="form-control" id="student-num" name="student-num" placeholder="" />
+							</div>
+						<div>
+						<div class="form-row">
+							<div class="form-group col-lg-6">
+								<label for="email" class="control-label">Email (do not use your uottawa email)<span style="color:red;">*</span></label>
+								<input type="email" id="email" class="form-control" name="email" placeholder="" />
+							</div>
+							<div class="form-group col-lg-6">
+								<label for="phone-number" class="control-label">Phone Number <span style="color:red;">*</span></label>
+								<input type="tel" class="form-control" id="phone-number" name="phone-number" placeholder="" />
+							</div>
+						<div>
+						<div class="form-row">
+							<div class="form-group col-lg-12">
+								<label for="diet" class="control-label">If you have any diatery restrictions (allergies, vegetarianism, lactose intolerance, etc.), please list them here:</label>
+								<textarea name="diet" id="diet" class="text_area " rows="4" cols="100"></textarea>
+							</div>
+						<div>
+						<div class="form-row">
+							<div class="form-group col-lg-12">
+								<label for="physical" class="control-label">If you have any physical disabilities or accessibility needs, please list them here:</label>
+								<textarea name="physical" id="physical" class="text_area " rows="4" cols="100"></textarea>
+							</div>
+						<div>
+						<div class="form-row">
+							<div class="form-group col-lg-12">
+								<label for="medication" class="control-label">If you have any physical disabilities or accessibility needs, please list them here:</label>
+								<textarea name="medication" id="medication" class="text_area " rows="4" cols="100"></textarea>
+								<small style="color: #4E6766;" class="font-italic d-block mb-3">All information provided will be kept confidential between the VP Social and select members of the 101 week team.</small>
+							</div>
+						<div>
+						<br/><hr/>
+						<h3 style="color:#5AB1BB">Emergency Contact</h3>
+						<div class="form-row">
+							<div class="form-group col-lg-4">
+								<label for="address" class="control-label"> Your Health Card Number <span style="color:red;">*</span></label>
+								<input type="number" class="form-control" name="health-num" id="health-num" placeholder="">
+							</div>
+							<div class="form-group col-lg-4">
+								<label for="input-text" class="control-label">Emergency Contact Full Name <span style="color:red;">*</span></label>
+								<input type="text" class="form-control" id="em-name" name="em-name" placeholder="" />
+							</div>
+							<div class="form-group col-lg-4">
+								<label for="input-text" class="control-label">Emergency Phone Number <span style="color:red;">*</span></label>
+								<input type="tel" class="form-control" id="em-num" name="em-num" placeholder="" />
+							</div>
+						<div>
+						<br/><hr/>
+						<h3 style="color:#5AB1BB">Billing Information</h3>
+						<div class="form-row">
+							<div class="form-group col-lg-4">
+								<label for="b-first-name" class="control-label">First Name <span style="color:red;">*</span></label>
+								<input type="text" class="form-control" id="b-first-name" name="b-first-name" placeholder="" />
+							</div>
+							<div class="form-group col-lg-4">
+								<label for="b-last-name" class="control-label">Last Name <span style="color:red;">*</span></label>
+								<input type="text" class="form-control" name="b-last-name" id="b-last-name" placeholder="" />
+							</div>
+							<div class="form-group col-lg-4">
+								<label for="b-input-text" class="control-label">Email <span style="color:red;">*</span></label>
+								<input type="number" class="form-control" name="b-input-text" id="b-input-text" placeholder="" />
+							</div>
+						<div>
+						<div class="form-row">
+							<div class="form-group col-lg-4">
+								<label for="b-first-name" class="control-label">Unit Number (if applicable)</span></label>
+								<input type="text" class="form-control" id="b-first-name" name="b-first-name" placeholder="" />
+							</div>
+							<div class="form-group col-lg-4">
+								<label for="b-last-name" class="control-label">Street Address<span style="color:red;">*</span></label>
+								<input type="text" class="form-control" name="b-last-name" id="b-last-name" placeholder="" />
+							</div>
+							<div class="form-group col-lg-4">
+								<label for="b-input-text" class="control-label">Postal Code <span style="color:red;">*</span></label>
+								<input type="number" class="form-control" name="b-input-text" id="b-input-text" placeholder="" />
+							</div>
+						<div>
+						<div class="form-row">
+							<div class="form-group col-lg-4">
+								<label for="b-first-name" class="control-label">Country <span style="color:red;">*</span></label>
+								<input type="text" class="form-control" id="b-first-name" name="b-first-name" placeholder="" />
+							</div>
+							<div class="form-group col-lg-4">
+								<label for="b-last-name" class="control-label">Province <span style="color:red;">*</span></label>
+								<input type="text" class="form-control" name="b-last-name" id="b-last-name" placeholder="" />
+							</div>
+							<div class="form-group col-lg-4">
+								<label for="b-input-text" class="control-label">City <span style="color:red;">*</span></label>
+								<input type="number" class="form-control" name="b-input-text" id="b-input-text" placeholder="" />
+							</div>
+						<div>
+						<div class ="col-lg-12">
+						<small style="color: #4E6766;" class="font-italic d-block mb-3">We do not keep or store any of this information, payment processing is powered by square .</small>
+						<div>
+						<center><button type="submit" class="btn">Complete Payment</button></center>	          			
+					  </form>
                       </div>
                   </div>
               </div>
           </div>
       </section>
-    <div id="form-container" style="display:none;">
+    <div id="form-container">
         <div id="sq-ccbox">
           <form id="nonce-form" novalidate action="process-payment" method="post">
             <fieldset>
