@@ -32,6 +32,10 @@ const defaultClient = squareConnect.ApiClient.instance;
 const oauth2 = defaultClient.authentications['oauth2'];
 oauth2.accessToken = accessToken;
 
+app.get('/checkout', (req,res) =>{
+  res.sendFile(path.join(__dirname + '/checkout.html'));
+});
+
 app.post('/process-payment', function(req, res){
   const requestParams = req.body;
 
